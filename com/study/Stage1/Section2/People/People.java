@@ -6,7 +6,7 @@ public class People {
     public static String nationality;
 
     public People(){}
-    public People(String name, int age, String nationality){
+    public People(String name, int age){
         setName(name);
         setAge(age);
         setNationality(nationality);

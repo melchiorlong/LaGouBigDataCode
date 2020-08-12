@@ -11,12 +11,12 @@ public class PeopleTest {
 
         System.out.println("--------------------------------------------------");
 
-        People p2 = new People("李四", 20, "日本");
+        People p2 = new People("李四", 20);
         p2.show();
 
         System.out.println("--------------------------------------------------");
 
-        People p3 = new People("王五", 22, "日本");
+        People p3 = new People("王五", 22);
         People.nationality = "美国";
         p3.show();
         p2.show();
