@@ -1,22 +1,36 @@
-package com.homework.Stage1.Section1;
+package com.homework.Stage1.Section2.Topic2;
 
-public class Chess_Board {
+public class ChessBoardCons {
 
-//    使用双重循环实现五子棋游戏棋盘的绘制棋盘界面
-//
-// 解题思路
-// 1、看图确定为二维数组
-// 2、将坐标行列与中间“+”剥离，分别处理
-// 3、因坐标非正整数，所以新增坐标数组，以便后期处理
-// 4、二位数组将棋盘中心部分确定
-// 5、打印部分添加坐标，并打印棋盘中心部分
-
-    // 新增棋盘二维数组、坐标数组、棋盘边长
+    private final int length = 16;
     private String[][] chess_board;
-    private String[] str = new String[]{"0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"};
+    private final String[] str = new String[length];
     private final int size = str.length;
 
-    public void setChess_board() {
+    public ChessBoardCons() {
+    }
+
+    public String[][] getChess_board() {
+        return chess_board;
+    }
+
+    public void setChess_board(String[][] chess_board) {
+        this.chess_board = chess_board;
+    }
+
+    public void generating(){
+        insert();
+        setChess_board();
+        print();
+    }
+
+    private void insert(){
+        for (int i = 0; i < size; i++) {
+            str[i] = Integer.toHexString(i);
+        }
+    }
+
+    private void setChess_board() {
         // 初始化棋盘中心二维数组
         chess_board = new String[size][size];
         // 用“+”填充
@@ -27,7 +41,7 @@ public class Chess_Board {
         }
     }
 
-    public void print(){
+    private void print(){
         // 打印图中左上角空格
         System.out.print(" ");
         // 循环打印坐标数组作为行坐标
@@ -48,14 +62,5 @@ public class Chess_Board {
             // 换行
             System.out.println();
         }
-    }
-
-
-
-    public static void main(String[] args) {
-        // 实例化
-        Chess_Board chessboard = new Chess_Board();
-        chessboard.setChess_board();
-        chessboard.print();
     }
 }
