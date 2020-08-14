@@ -1,7 +1,5 @@
 package com.homework.Stage1.Section2.Topic2;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -79,12 +77,11 @@ public class ChessGame {
         }
     }
 
-
     /**
      * 更新棋盘，根据输入坐标更新二维数组元素值为white或black
      *
-     * @param x
-     * @param y
+     * @param x 横坐标
+     * @param y 纵坐标
      */
     public void update(int x, int y, int whichOne, String[][] chess_board) {
         if (whichOne > 0) {
@@ -96,12 +93,7 @@ public class ChessGame {
 
     /**
      * 判断胜负
-     * winner：
-     * 1：黑胜
-     * 0：平局
-     * -1：白胜
-     *
-     * @return
+     * @return 返回值 1：黑胜 -1：白胜
      */
     public int whoIsWinner(String[][] chess_board, int x, int y) {
         int piecesCount = 0;
@@ -216,9 +208,8 @@ public class ChessGame {
             }
             if (piecesCount >= 5) {
                 flag = true;
-            } else {
-                piecesCount = 0;
             }
+
             if (flag) {
                 isFinished = true;
                 result = currentPieces.equals(String.valueOf(WHITE)) ? -1 : 1;
