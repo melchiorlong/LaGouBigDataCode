@@ -1,5 +1,7 @@
 package com.homework.Stage1.Section2.Topic2;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -14,19 +16,21 @@ import java.util.Scanner;
 public class ChessGame {
 
     private boolean isFinished = false;
-    private int count = 0;
+    private int stepCount = 0;
     private int winner = 0;
     private int whichOne = 1;
     private final int length = 16;
     private final String[] str = new String[length];
     private final int size = str.length;
     private final String[] edge = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
+    private final static char WHITE = '\u25CB'; // WHITE = ○
+    private final static char BLACK = '\u25CF'; // BLACK = ●
+
 
     public void start(String[][] chess_board) {
 
         List<String> edge_list = Arrays.asList(edge);
         do {
-            System.out.println(count<=256?"":"和棋啦！");
             Scanner sc = new Scanner(System.in);
             System.out.println(whichOne > 0 ? "白方下棋，请出入横纵坐标（如：1 2）" : "黑方下棋，请出入横纵坐标（如：1 2）");
             String inx = sc.next();
@@ -51,20 +55,27 @@ public class ChessGame {
             insert();
             print(chess_board);
 
-//          判断是否结束及胜者
-            winner = whoIsWinner(chess_board);
-
-        } while (isFinished);
-        {
-            System.out.println("结束了");
-            if (winner == 0) {
-                System.out.println("平局");
-            } else if (winner > 0) {
-                System.out.println("黑方胜利");
-            } else {
-                System.out.println("白方胜利");
+//          判断是否结束及谁是胜者
+            for (int i = 0; i < length; i++) {
+                for (int j = 0; j < length; j++) {
+                    if (!isFinished) {
+                        winner = whoIsWinner(chess_board, i, j);
+                    }
+                }
             }
-
+            stepCount += 1;
+        } while (!isFinished || stepCount == 256);
+        {
+            System.out.println("游戏结束");
+            if (stepCount == 256) {
+                System.out.println("平局");
+            } else {
+                if (winner > 0) {
+                    System.out.println("黑方胜利");
+                } else {
+                    System.out.println("白方胜利");
+                }
+            }
         }
     }
 
@@ -77,15 +88,10 @@ public class ChessGame {
      */
     public void update(int x, int y, int whichOne, String[][] chess_board) {
         if (whichOne > 0) {
-            // white = ○
-            char white = '\u25CB';
-            chess_board[x][y] = String.valueOf(white);
+            chess_board[x][y] = String.valueOf(WHITE);
         } else {
-            // black = ●
-            char black = '\u25CF';
-            chess_board[x][y] = String.valueOf(black);
+            chess_board[x][y] = String.valueOf(BLACK);
         }
-        count += 1;
     }
 
     /**
@@ -97,21 +103,129 @@ public class ChessGame {
      *
      * @return
      */
-    public int whoIsWinner(String[][] chess_board) {
-        // 水平判断
-        for (int i = 0; i < 16; i++) {
-            for (int j = 0; j < 16; j++) {
+    public int whoIsWinner(String[][] chess_board, int x, int y) {
+        int piecesCount = 0;
+        int result = 1;
+        boolean flag = false;
+        String currentPieces = chess_board[x][y];
+        // 水平垂直判断
+        // 左 - 右
+        if (!currentPieces.equals("+")) {
+            for (int i = y; i < length; i++) {
+                if (chess_board[x][i].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 右 - 左
+            for (int i = y; i >= 0; i--) {
+                if (chess_board[x][i].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 上 - 下
+            for (int i = x; i < length; i++) {
+                if (chess_board[i][y].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 下 - 上
+            for (int i = x; i >= 0; i--) {
+                if (chess_board[i][y].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
 
 
-
-
-
+            // 斜向
+            // 左上 - 右下
+            for (int i = x, j = y; i < length && j < length; i++, j++) {
+                if (chess_board[i][j].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
 
             }
-        }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 右下 - 左上
+            for (int i = x, j = y; i >= 0 && j >= 0; i--, j--) {
+                if (chess_board[i][j].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 左下 - 右上
+            for (int i = x, j = y; i < length && j >= 0; i++, j--) {
+                if (chess_board[i][j].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            // 右下 - 左上
+            for (int i = x, j = y; i >= 0 && j < length; i--, j++) {
+                if (chess_board[i][j].equals(currentPieces)) {
+                    piecesCount++;
+                } else {
+                    break;
 
-        isFinished = true;
-        return 0;
+                }
+            }
+            if (piecesCount >= 5) {
+                flag = true;
+            } else {
+                piecesCount = 0;
+            }
+            if (flag) {
+                isFinished = true;
+                result = currentPieces.equals(String.valueOf(WHITE)) ? -1 : 1;
+                return result;
+            }
+        }
+        return result;
     }
 
     private void insert() {
