@@ -1,4 +1,4 @@
-package com.homework.Stage1.Section2.Topic3;
+package com.homework.Stage1.Section2.Topic3.BasicInfo;
 
 public enum SimCardTypeEnum {
     BIG("大卡"),

@@ -1,6 +1,9 @@
-package com.homework.Stage1.Section2.Topic3;
+package com.homework.Stage1.Section2.Topic3.BasicInfo;
 
-public class CallPlans implements CallingSerInterface{
+import com.homework.Stage1.Section2.Topic3.BasicInfo.SimCard;
+import com.homework.Stage1.Section2.Topic3.CallingSerInterface;
+
+public class CallPlans implements CallingSerInterface {
 
     private String CallingDuration;
     private int MsgNum;

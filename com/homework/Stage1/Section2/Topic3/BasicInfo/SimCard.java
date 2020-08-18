@@ -1,8 +1,8 @@
-package com.homework.Stage1.Section2.Topic3;
+package com.homework.Stage1.Section2.Topic3.BasicInfo;
 
 public class SimCard {
 
-    private String CardType;
+    private Enum CardType;
     private String CardNum;
     private String UserName;
     private String Password;
@@ -13,7 +13,7 @@ public class SimCard {
     public SimCard() {
     }
 
-    public SimCard(String cardType, String cardNum, String userName, String password, double accountBalance, int callingDuration, int networkFlow) {
+    public SimCard(Enum cardType, String cardNum, String userName, String password, double accountBalance, int callingDuration, int networkFlow) {
         CardType = cardType;
         CardNum = cardNum;
         UserName = userName;
@@ -23,11 +23,11 @@ public class SimCard {
         NetworkFlow = networkFlow;
     }
 
-    public String getCardType() {
+    public Enum getCardType() {
         return CardType;
     }
 
-    public void setCardType(String cardType) {
+    public void setCardType(Enum cardType) {
         CardType = cardType;
     }
 
@@ -80,7 +80,13 @@ public class SimCard {
     }
 
     public void simCardShow() {
-        System.out.println("卡号、用户名、当前余额分别为：" + getCardNum() + ", " + getUserName() + ", " + getAccountBalance());
+        System.out.println("卡号：" + getCardNum());
+        System.out.println("用户名：" + getUserName());
+        System.out.println("密码：" + getPassword());
+        System.out.println("Sim卡类型：" + getCardType());
+        System.out.println("已经使用通话时长：" + getCallingDuration());
+        System.out.println("已使用流量：" + getNetworkFlow());
+        System.out.println("余额："  + getAccountBalance());
     }
 
 

@@ -1,6 +1,9 @@
-package com.homework.Stage1.Section2.Topic3;
+package com.homework.Stage1.Section2.Topic3.BasicInfo;
 
-public class NetworkPlans implements NetworkSerInterface{
+import com.homework.Stage1.Section2.Topic3.BasicInfo.SimCard;
+import com.homework.Stage1.Section2.Topic3.NetworkSerInterface;
+
+public class NetworkPlans implements NetworkSerInterface {
 
     private int NetworkFlow;
     private int Price;
