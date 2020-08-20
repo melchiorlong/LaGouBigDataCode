@@ -1,10 +1,9 @@
 package com.study.Stage1.Section3.Task5;
 
-import org.jetbrains.annotations.NotNull;
 
-public class Student implements Comparable<Student>{
-     private String name;
-     private int age;
+public class Student implements Comparable<Student> {
+    private String name;
+    private int age;
 
     public Student() {
     }
@@ -40,8 +39,8 @@ public class Student implements Comparable<Student>{
 
 
     @Override
-    public int compareTo(@NotNull Student o) {
-//        调用对象和参数对象相等
+    public int compareTo(Student o) {
+        //        调用对象和参数对象相等
 //        return -1;
 
 //        按照姓名首字母排序
@@ -49,7 +48,5 @@ public class Student implements Comparable<Student>{
 //        按照年龄排序
         return this.getAge() - o.getAge();
 
-
-//        return 0;
     }
 }
