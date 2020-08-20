@@ -9,4 +9,15 @@ public class MaxSameString {
      *
      *  提示： 将短的那个串进行长度依次递减的子串与较长的串比较。
      */
+
+    public static final String s1 = "asdafghjka";
+    public static final String s2 = "aaasdfg";
+
+    public static void main(String[] args) {
+
+
+    }
+
+
+
 }
