@@ -106,7 +106,9 @@ public class StudentManagementSys {
                         System.out.println(stu);
                     }
                     break;
-
+                case "6":
+                    System.out.println("谢谢使用！");
+                    break;
                 default:
                     System.out.println("输入错误。");
             }

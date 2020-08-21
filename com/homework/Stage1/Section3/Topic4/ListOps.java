@@ -20,10 +20,6 @@ public class ListOps {
         list.remove(delete_s);
     }
 
-    public static void change(List<Student> list, Student s){
-
-    }
-
     public static Student findId(List<Student> list, String find_id) {
         for (Student stu : list
         ) {
