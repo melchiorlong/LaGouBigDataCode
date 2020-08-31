@@ -58,7 +58,7 @@ public class ChessGame {
             int x = (int) Long.parseLong(inx, 16);
             int y = (int) Long.parseLong(iny, 16);
 //            判断输入坐标是否已经被使用
-            if (!chess_board[x][y].equals("+")) {
+            if (!"+".equals(chess_board[x][y])) {
                 System.out.println("位置已经被使用，请重新下棋");
                 continue;
             }
@@ -123,7 +123,7 @@ public class ChessGame {
         String currentPieces = chess_board[x][y];
 
         // 如果当前位置是"+"则直接跳出
-        if (!currentPieces.equals("+")) {
+        if (!"+".equals(currentPieces)) {
             // 水平垂直判断
             // 左 - 右
             for (int i = y; i < length; i++) {

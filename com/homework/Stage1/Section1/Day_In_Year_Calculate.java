@@ -34,9 +34,9 @@ public class Day_In_Year_Calculate {
         boolean isLeap = true;
         // 判断是否闰年
         if (year % 100 == 0) {
-            isLeap = year % 400 == 0 ? true : false;
+            isLeap = year % 400 == 0;
         } else {
-            isLeap = year % 4 == 0 ? true : false;
+            isLeap = year % 4 == 0;
         }
         return isLeap;
     }

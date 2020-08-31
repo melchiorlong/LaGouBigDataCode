@@ -29,7 +29,7 @@ public class StudentManagementSys {
         list.add(new Student("小六", 1005, 20));
         String input = "";
 
-        while (!input.equals("6")) {
+        while (!"6".equals(input)) {
             System.out.println("你要做什么？1:增加 2:删除 3:修改 4:查找 5:显示所有 6:退出。");
             Scanner sc = new Scanner(System.in);
             input = sc.next();
@@ -77,26 +77,33 @@ public class StudentManagementSys {
                     System.out.println("请输入需要查找的条件如，1：学号 2：姓名 3：年龄");
                     Scanner sc_find = new Scanner(System.in);
                     String find_num = sc_find.next();
-                    if (find_num.equals("1")) {
-                        System.out.println("请输入学号");
-                        Scanner sc_find_id = new Scanner(System.in);
-                        String find_id = sc_find_id.next();
-                        Student result_stu = ListOps.findId(list, find_id);
-                        System.out.println("result_id = " + result_stu);
-                    } else if (find_num.equals("2")) {
-                        System.out.println("请输入姓名");
-                        Scanner sc_find_name = new Scanner(System.in);
-                        String find_name = sc_find_name.next();
-                        List<Student> resultList = ListOps.findName(list, find_name);
-                        System.out.println("result_id = " + resultList);
-                    } else if (find_num.equals("3")) {
-                        System.out.println("请输入年龄");
-                        Scanner sc_find_age = new Scanner(System.in);
-                        String find_age = sc_find_age.next();
-                        List<Student> resultList = ListOps.findAge(list, find_age);
-                        System.out.println("result_id = " + resultList);
-                    } else {
-                        System.out.println("输入错误");
+                    switch (find_num) {
+                        case "1":
+                            System.out.println("请输入学号");
+                            Scanner sc_find_id = new Scanner(System.in);
+                            String find_id = sc_find_id.next();
+                            Student result_stu = ListOps.findId(list, find_id);
+                            System.out.println("result_id = " + result_stu);
+                            break;
+                        case "2": {
+                            System.out.println("请输入姓名");
+                            Scanner sc_find_name = new Scanner(System.in);
+                            String find_name = sc_find_name.next();
+                            List<Student> resultList = ListOps.findName(list, find_name);
+                            System.out.println("result_id = " + resultList);
+                            break;
+                        }
+                        case "3": {
+                            System.out.println("请输入年龄");
+                            Scanner sc_find_age = new Scanner(System.in);
+                            String find_age = sc_find_age.next();
+                            List<Student> resultList = ListOps.findAge(list, find_age);
+                            System.out.println("result_id = " + resultList);
+                            break;
+                        }
+                        default:
+                            System.out.println("输入错误");
+                            break;
                     }
                     break;
 

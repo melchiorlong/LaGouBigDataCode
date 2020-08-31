@@ -19,14 +19,14 @@ public class MaxSameString {
      * 5、从List中取出最长的元素
      */
 
-    public static final String s1 = "asdafghjka";
-    public static final String s2 = "aaasdfg";
+    public static final String S1 = "asdafghjka";
+    public static final String S2 = "aaasdfg";
 
 
     public static void main(String[] args) {
 
-        String big_str = s1.length() - s2.length() >= 0 ? s1 : s2;
-        String small_str = s1.length() - s2.length() >= 0 ? s2 : s1;
+        String big_str = S1.length() - S2.length() >= 0 ? S1 : S2;
+        String small_str = S1.length() - S2.length() >= 0 ? S2 : S1;
         List<String> subList = new ArrayList<>();
         List<String> result_temp = new ArrayList<>();
         List<String> result = new ArrayList<>();

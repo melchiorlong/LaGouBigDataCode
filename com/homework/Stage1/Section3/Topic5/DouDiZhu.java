@@ -42,8 +42,8 @@ public class DouDiZhu {
 //        插入剩余52张牌
         for (String num : nums) {
             for (String suit : suits) {
-                String suit_num = suit + num;
-                cards.put(count, suit_num);
+                String suitNum = suit + num;
+                cards.put(count, suitNum);
                 count += 1;
             }
         }

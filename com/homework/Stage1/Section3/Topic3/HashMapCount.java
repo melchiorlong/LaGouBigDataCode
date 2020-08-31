@@ -21,13 +21,13 @@ public class HashMapCount {
      * 4、打印结果
      */
 
-    public static final String str = "123,456,789,123,456";
+    public static final String STR = "123,456,789,123,456";
 
     public static void main(String[] args) {
 
         HashMap<String, Integer> map = new HashMap<>();
 //        拆分字符串
-        String[] sp = str.split(",");
+        String[] sp = STR.split(",");
 
 //        遍历判断插入
         for (String s : sp) {

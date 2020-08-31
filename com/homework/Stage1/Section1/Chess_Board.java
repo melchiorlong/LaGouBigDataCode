@@ -13,7 +13,7 @@ public class Chess_Board {
 
     // 新增棋盘二维数组、坐标数组、棋盘边长
     private String[][] chess_board;
-    private String[] str = new String[]{"0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"};
+    private final String[] str = new String[]{"0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"};
     private final int size = str.length;
 
     public void setChess_board() {
