@@ -1,6 +1,6 @@
 package com.study.Stage1.Section4.Task5;
 
-import org.jetbrains.annotations.NotNull;
+//import org.jetbrains.annotations.NotNull;
 
 import java.io.Serializable;
 
@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class Student<T,E> extends Person implements Comparable<String>, Serializable {
 
     @Override
-    public int compareTo(@NotNull String o) {
+    public int compareTo(String o) {
         return 0;
     }
 }
