@@ -10,7 +10,7 @@ import java.io.FileFilter;
 public class RecursiveDeleteTest {
 
     private static final String PATH_MAC = "/Users/tianlong/Desktop/LaGouBigDataStudy/src/com/homework/Stage1/Section4/Topic2/DeleteDemo";
-    private static final String PATH_WINDOWS = "D://DeleteDemo";
+    private static final String PATH_WINDOWS = "I:\\LaGou_BigData_Study\\src\\com\\homework\\Stage1\\Section4\\Topic2\\DeleteDemo";
 
     public static void main(String[] args) {
         File file = new File(PATH_MAC);
