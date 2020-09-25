@@ -15,10 +15,8 @@ public class ServerStringTest {
 
     public static void main(String[] args) {
 
-
         ServerSocket serverSocket = null;
         Socket socket = null;
-
         try {
             serverSocket = new ServerSocket(8888);
             while (true) {
