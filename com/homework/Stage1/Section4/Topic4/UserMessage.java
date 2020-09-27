@@ -1,6 +1,8 @@
 package com.homework.Stage1.Section4.Topic4;
 
-import com.study.Stage1.Section4.Task2.User;
+
+
+import java.io.Serializable;
 
 /**
  * @author tianlong
@@ -14,8 +16,9 @@ import com.study.Stage1.Section4.Task2.User;
  * UserMessage tum = new UserMessage("check", new User("admin", "123456"));
  */
 
-public class UserMessage {
+public class UserMessage implements Serializable {
 
+    private static final long serialVersionUID = -6052751148579961901L;
     private String type;
     private User user;
 

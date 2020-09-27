@@ -1,10 +1,13 @@
 package com.homework.Stage1.Section4.Topic4;
 
+import java.io.Serializable;
+
 /**
  * @author tianlong
  * User 类的特征有：用户名、密码(字符串类型)。
  */
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 8272161466712870135L;
     private String userName;
     private String passWord;
 

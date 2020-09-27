@@ -5,6 +5,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
+/**
+ * @author tianlonf
+ */
 public class ObjectOutputStreamTest {
 
     public static void main(String[] args) {
