@@ -39,17 +39,16 @@ public class TcpServerThread extends Thread {
 
                 String readLine = br.readLine();
                 System.out.println("客户端" + socketAddress + "发来的数据是：" + readLine);
+                if ("bye".equals(readLine)) {
+                    System.out.println("聊天结束客户端" + socketAddress + "已关闭！");
+                    socketList.remove(socket);
+                    flag = false;
+                }
                 for (Socket so : socketList) {
                     ps = new PrintStream(so.getOutputStream());
-                    ps.println("Received");
                     ps.println(readLine);
-                    if ("bye".equals(readLine)) {
-                        System.out.println("聊天结束客户端" + socketAddress + "已关闭！");
-                        socketList.remove(socket);
-                        flag = false;
-                    }
-                }
 
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -70,10 +69,6 @@ public class TcpServerThread extends Thread {
                 e.printStackTrace();
             }
         }
-
-
     }
-
-
 }
 
