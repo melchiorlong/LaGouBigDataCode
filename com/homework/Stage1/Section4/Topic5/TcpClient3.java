@@ -9,7 +9,7 @@ import java.net.Socket;
  * 使用输入输出流进行通信
  * 关闭Socket并释有关的资源
  */
-public class TcpClient2 {
+public class TcpClient3 {
 
     public static void main(String[] args) {
 

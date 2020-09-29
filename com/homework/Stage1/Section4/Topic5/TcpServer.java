@@ -23,9 +23,11 @@ public class TcpServer {
             serverSocket = new ServerSocket(8888);
             while (true){
                 System.out.println("等待客户端连接....");
+                System.out.println("socketList = " + socketList);
                 socket = serverSocket.accept();
                 socketList.add(socket);
                 System.out.println("地址为：" + socket.getInetAddress() + "的客户端连接成功！");
+
                 new TcpServerThread(socket, socketList).start();
                 System.out.println("socketList = " + socketList);
 

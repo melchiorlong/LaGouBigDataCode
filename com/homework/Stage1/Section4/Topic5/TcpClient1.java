@@ -14,59 +14,17 @@ public class TcpClient1 {
 
     public static void main(String[] args) {
 
-        Socket socket = null;
-        PrintStream ps = null;
-        BufferedReader br = null;
-        Scanner sc = null;
-        boolean flag = true;
+        Socket socket;
+
         try {
             socket = new Socket("127.0.0.1", 8888);
             System.out.println("连接服务器成功！");
-            sc = new Scanner(System.in);
-            ps = new PrintStream(socket.getOutputStream());
-            br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
-            while (flag) {
-                System.out.println("请输入要发送的数据内容：");
-                String input = sc.next();
+            new TcpClientReceiveThread(socket).start();
+            new TcpClientSendThread(socket).start();
 
-                ps.println(input);
-                System.out.println("客户端发送数据成功");
-
-                String readLine = br.readLine();
-                System.out.println("客户端接收数据成功。");
-                System.out.println("返回内容是：" + readLine);
-
-                if ("bye".equals(input)) {
-                    System.out.println("聊天结束。");
-                    flag = false;
-                }
-            }
         } catch (IOException e) {
             e.printStackTrace();
-        } finally {
-            if (br != null) {
-                try {
-                    br.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (ps != null) {
-                ps.close();
-            }
-            if (socket != null) {
-                try {
-                    socket.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (sc != null) {
-                sc.close();
-            }
         }
-
-
     }
 }

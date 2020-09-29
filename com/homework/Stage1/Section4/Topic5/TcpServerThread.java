@@ -1,9 +1,6 @@
 package com.homework.Stage1.Section4.Topic5;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.SocketAddress;
@@ -31,7 +28,6 @@ public class TcpServerThread extends Thread {
         BufferedReader br = null;
         PrintStream ps = null;
         boolean flag = true;
-
         try {
             while (flag) {
                 SocketAddress socketAddress = socket.getRemoteSocketAddress();
@@ -40,14 +36,16 @@ public class TcpServerThread extends Thread {
                 String readLine = br.readLine();
                 System.out.println("客户端" + socketAddress + "发来的数据是：" + readLine);
                 if ("bye".equals(readLine)) {
+                    sendClose();
                     System.out.println("聊天结束客户端" + socketAddress + "已关闭！");
                     socketList.remove(socket);
                     flag = false;
                 }
                 for (Socket so : socketList) {
-                    ps = new PrintStream(so.getOutputStream());
-                    ps.println(readLine);
-
+                    if (socket != so){
+                        ps = new PrintStream(so.getOutputStream());
+                        ps.println(readLine);
+                    }
                 }
             }
         } catch (IOException e) {
@@ -69,6 +67,11 @@ public class TcpServerThread extends Thread {
                 e.printStackTrace();
             }
         }
+    }
+    private void sendClose(){
+        TcpClientSendThread tcpClientSendThread = new TcpClientSendThread(socket);
+        tcpClientSendThread.sendString("bye");
+
     }
 }
 
