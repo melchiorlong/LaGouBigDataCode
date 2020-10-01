@@ -1,9 +1,6 @@
 package com.homework.Stage1.Section4.Topic5;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 import java.net.SocketException;
 import java.util.List;
@@ -23,10 +20,26 @@ public class TcpClientReceiveThread extends Thread {
     @Override
     public void run() {
         BufferedReader br = null;
+        ObjectInputStream ois = null;
         try {
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            ois = new ObjectInputStream(socket.getInputStream());
+
             while (true) {
-                String readLine = br.readLine();
+//                String readLine = br.readLine();
+                String readLine = "";
+                Object obj = ois.readObject();
+                if(obj instanceof String){
+                    readLine = br.readLine();
+                } else if (obj instanceof ObjectOutputStream){
+                    FileOutputStream fos;
+                    fos = new FileOutputStream("/Users/tianlong/Desktop/LaGouBigDataStudy/src/com/homework/Stage1/Section4/Topic5/Client_2_File");
+
+
+
+                }
+
+
                 if ("bye".equals(readLine)){
                     sendClose();
                     break;
@@ -36,7 +49,7 @@ public class TcpClientReceiveThread extends Thread {
                 }
             }
 
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             if (br != null) {

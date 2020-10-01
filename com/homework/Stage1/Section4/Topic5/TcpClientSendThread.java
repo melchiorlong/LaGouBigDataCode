@@ -57,10 +57,18 @@ public class TcpClientSendThread extends Thread {
     }
 
     public void sendObject(String path) {
+        File file;
+        FileInputStream fis = null;
+        ObjectOutputStream oos = null;
 
-        // 待完成
-
-
+        try {
+            file = new File(path);
+            fis = new FileInputStream(file);
+            oos = new ObjectOutputStream(socket.getOutputStream());
+            oos.writeObject(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
