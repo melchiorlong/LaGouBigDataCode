@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE students SYSTEM "student.dtd">
+<students>
+    <student number="S1">
+        <name>林黛玉</name>
+        <age>20</age>
+        <sex>女</sex>
+    </student>
+    <student number="S2">
+        <name>杜甫</name>
+        <age>40</age>
+        <sex>男</sex>
+    </student>
+</students>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<users>
+    <user id = "1">
+        <name>张百万</name>
+        <age>15</age>
+    </user>
+
+    <user id="2">
+        <name>小强</name>
+        <age>18</age>
+        <hobby>
+            <basketball>
+
+            </basketball>
+        </hobby>
+    </user>
+
+    <!-- 空元素 没有结束标签 -->
+    <close/>
+</users>
+
+
+<!--XML的注释
+    1.XML文件中必须进行文档声明
+        version 版本信息
+        encoding 编码
+
+    2. XML的文档声明必须写在第一行
+
+    3. XML中的元素标签命名规则
+        标签定义不能使用空格 及 冒号
+        标签区分大小写
+
+    4. XML中 有且只有一个根元素
+
+    5. 元素体可以是文本 也可以是标签
+
+    6. 属性是元素的一部分
+        属性值必须使用 单引号 或 双引号
+        一个元素标签可以定义多个属性 属性名命名不能使用空格及冒号
+-->
