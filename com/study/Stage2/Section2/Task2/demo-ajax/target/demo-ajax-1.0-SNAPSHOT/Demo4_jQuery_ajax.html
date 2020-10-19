@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    需求：
+    点击一个按钮 发送一个ajax请求到后台
+    后台打印接收到请求，并且给前台页面返回一个hello
+    -->
+    <link rel="shortcut icon" href="#" />
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script>
+        function send(){
+            // ajax请求
+            // 格式：
+            // $.ajax({
+            //     url : "后台地址",
+            //     async : true,
+            //     data : "username = jack & age = 19"
+            //     type : "GET" or "POST",
+            //     dataType : "text" or "json",
+            //     success : function (data){
+            //
+            //         },
+            //     error : function (){
+            //
+            //         },
+            // })
+
+            $.ajax({
+                url : "/demo_ajax/DemoServlet",
+                async : true,
+                data : "username=jack&age=18",
+                type : "POST",
+                dataType : "text",
+                success : function (data){
+                    alert("hello");
+                },
+                error : function (){
+                    alert("执行失败");
+                }
+            });
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="发送ajax请求" onclick="send()">
+</body>
+</html>
