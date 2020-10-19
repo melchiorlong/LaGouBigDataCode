@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    需求：
+    点击一个按钮 发送一个ajax请求到后台
+    后台打印接收到请求，并且给前台页面返回一个hello
+    -->
+
+    <script>
+        // 发送ajax请求的方法
+        //    1）创建Ajax引擎对象
+        //    2）为Ajax引擎对象绑定监听（监听服务器已将数据响应给引擎）
+        //    3）绑定提交地址
+        //    4）发送请求
+        //    5）接受响应数据
+        function send(){
+            //    1）创建Ajax引擎对象
+            var xhr = new XMLHttpRequest();
+            //    2）为Ajax引擎对象绑定监听（监听服务器已将数据响应给引擎）
+            // onreadystatechange 监听核心对象XMLHttpRequest对象的事件
+            xhr.onreadystatechange = function (){
+                // readyState 执行的状态 1 2 3 4(响应结束)
+                // state
+                if (xhr.readyState == 4 && xhr.status == 200){
+                    //    5）接受响应数据
+                    alert(xhr.responseText);
+                }
+            }
+            //    3）绑定提交地址
+            // 参数1 请求方式
+            // 参数2 请求后台服务器的资源路径
+            // 参数3 是否为异步请求 true->是 false->不是
+            xhr.open("GET", "/demo_ajax/DemoServlet", true);
+            //    4）发送请求
+            xhr.send()
+        }
+
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="发送ajax请求" onclick="send()">
+</body>
+</html>

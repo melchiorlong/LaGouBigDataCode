@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    需求：
+    点击一个按钮 发送一个ajax请求到后台
+    后台打印接收到请求，并且给前台页面返回一个hello
+    -->
+    <script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <script>
+
+        function send(){
+
+        //    发送ajax请求
+        //     格式：$.get(url, [data], [callback], [type])
+            // 参数解释
+            // url 必填参数 请求服务器的地址
+            // data 发送给服务器的参数 key=value 服务器可以根据key获取value
+            // callback 回调函数 当服务器响应完毕后 该函数会执行 形式参数data  代表是服务器返回的数据
+            // type 代表服务器返回的数据类型 常用的有：text, json
+            $.get("/demo_ajax/DemoServlet", "username=tom", function (data){
+                alert(data);
+            }, "text");
+
+
+
+
+
+        }
+
+
+    </script>
+
+
+</head>
+<body>
+<input type="button" value="发送ajax请求" onclick="send()">
+</body>
+</html>

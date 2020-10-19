@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+    <script src="js/jquery-3.5.1.js"></script>
+    <script>
+        /*
+        * 需求
+        * 当用户名输入框 光标失去
+        * 发送ajax请求查询后台
+        * 判断用户是否已经存在
+        * 最后给出提示
+        *
+        *
+        *
+        *
+        * */
+
+        $(function () {
+            // 1、给用户名输入框加光标失去事件
+            $("#uid").blur(function () {
+                // 2、获取username中value 然后发送到后台
+                let userNameIn = $("#uid").val();
+                // 3、发送ajax，传递用户名参数
+                $.post(
+                    "/ajax_verify_project/CheckServlet",
+                    {"username": userNameIn},
+                    function (data) {
+                        // 4、判断 isExist 是否为true 如果为true 用户存在 msg设置为红色，放到span中 否则为绿色放到span中
+                        if (data.isExist) {
+                            // 用户名已经存在
+                            $("#uid_msg").css("color", "red").html(data.msg);
+                        } else {
+                            $("#uid_msg").css("color", "green").html(data.msg);
+                        }
+                    },
+                    "json"
+                );
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="text" name="username" id="uid" placeholder="请输入用户名">
+<span id="uid_msg"></span>
+<br>
+<input type="text" name="password" id="pwd" placeholder="请输入密码">
+<br>
+<input type="submit" value="注册">
+
+
+</body>
+</html>

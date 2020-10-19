@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users xmlns="http://www.lagou.com/xml"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.lagou.com/xml user.xsd"
+>
+    <user id="0001">
+        <name>张百万</name>
+        <age>18</age>
+        <hobby>抽烟</hobby>
+    </user>
+    <user id="0002">
+        <name>于谦</name>
+        <age>40</age>
+        <hobby>喝酒</hobby>
+    </user>
+    <user id="0003">
+        <name>郭德纲</name>
+        <age>34</age>
+        <hobby>烫头</hobby>
+    </user>
+
+</users>
