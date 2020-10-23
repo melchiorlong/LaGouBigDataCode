@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<!--    配置QuickServlet
+        servlet-name : 当前配置的servlet起一个别名，可随意起名，
+        servlet-class: 编写的是配置的servlet的全限定名
+
+
+
+-->
+    <servlet>
+        <servlet-name>QuickServlet</servlet-name>
+        <servlet-class>com.lagou.servlet_demo.QuickServlet</servlet-class>
+    </servlet>
+
+<!--    servlet-mapping：给servlet设置一个映射地址
+        servlet-name: 给指定名称的servlet配置映射地址
+        url-pattern: 具体该servlet的映射地址(访问路径)
+        配置时 必须以/开头，
+-->
+
+    <servlet-mapping>
+        <servlet-name>QuickServlet</servlet-name>
+        <url-pattern>/quickServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
+
+</web-app>

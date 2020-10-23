@@ -1,0 +1,307 @@
+22-Oct-2020 16:29:42.979 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.59
+22-Oct-2020 16:29:42.988 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Oct 6 2020 16:57:18 UTC
+22-Oct-2020 16:29:42.989 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     8.5.59.0
+22-Oct-2020 16:29:42.989 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+22-Oct-2020 16:29:42.990 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Oct-2020 16:29:42.990 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Oct-2020 16:29:42.990 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jdk-11.0.2
+22-Oct-2020 16:29:42.990 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    11.0.2+9-LTS
+22-Oct-2020 16:29:42.990 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Oct-2020 16:29:42.991 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:29:42.991 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:29:42.991 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+22-Oct-2020 16:29:42.992 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+22-Oct-2020 16:29:42.992 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Oct-2020 16:29:42.992 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\logging.properties
+22-Oct-2020 16:29:42.992 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Oct-2020 16:29:42.993 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+22-Oct-2020 16:29:42.993 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Oct-2020 16:29:42.993 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+22-Oct-2020 16:29:42.993 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:29:42.994 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:29:42.994 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\temp
+22-Oct-2020 16:29:42.994 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.25]。
+22-Oct-2020 16:29:42.995 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]。
+22-Oct-2020 16:29:42.995 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
+22-Oct-2020 16:29:42.999 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL成功初始化 [OpenSSL 1.1.1g  21 Apr 2020]
+22-Oct-2020 16:29:43.043 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Oct-2020 16:29:43.273 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Oct-2020 16:29:43.282 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 662 ms
+22-Oct-2020 16:29:43.324 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Oct-2020 16:29:43.324 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.59
+22-Oct-2020 16:29:43.341 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]
+22-Oct-2020 16:29:43.716 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[187]毫秒。
+22-Oct-2020 16:29:43.738 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]的部署已在[398]毫秒内完成
+22-Oct-2020 16:29:43.739 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]
+22-Oct-2020 16:29:44.027 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]的部署已在[289]毫秒内完成
+22-Oct-2020 16:29:44.032 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]
+22-Oct-2020 16:29:44.058 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]的部署已在[26]毫秒内完成
+22-Oct-2020 16:29:44.064 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]
+22-Oct-2020 16:29:44.089 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]的部署已在[26]毫秒内完成
+22-Oct-2020 16:29:44.095 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]
+22-Oct-2020 16:29:44.113 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]的部署已在[18]毫秒内完成
+22-Oct-2020 16:29:44.121 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Oct-2020 16:29:44.129 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 848 ms
+22-Oct-2020 16:32:40.738 信息 [Thread-3] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Oct-2020 16:32:40.918 信息 [Thread-3] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Oct-2020 16:32:40.941 信息 [Thread-3] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Oct-2020 16:32:40.943 信息 [Thread-3] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+22-Oct-2020 16:37:54.040 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.59
+22-Oct-2020 16:37:54.044 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Oct 6 2020 16:57:18 UTC
+22-Oct-2020 16:37:54.044 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     8.5.59.0
+22-Oct-2020 16:37:54.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+22-Oct-2020 16:37:54.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Oct-2020 16:37:54.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Oct-2020 16:37:54.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jdk-11.0.2
+22-Oct-2020 16:37:54.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    11.0.2+9-LTS
+22-Oct-2020 16:37:54.046 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Oct-2020 16:37:54.046 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:37:54.046 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:37:54.047 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+22-Oct-2020 16:37:54.047 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+22-Oct-2020 16:37:54.047 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Oct-2020 16:37:54.047 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\logging.properties
+22-Oct-2020 16:37:54.048 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Oct-2020 16:37:54.048 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+22-Oct-2020 16:37:54.049 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Oct-2020 16:37:54.049 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+22-Oct-2020 16:37:54.049 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:37:54.050 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:37:54.050 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\temp
+22-Oct-2020 16:37:54.050 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.25]。
+22-Oct-2020 16:37:54.051 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]。
+22-Oct-2020 16:37:54.051 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
+22-Oct-2020 16:37:54.056 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL成功初始化 [OpenSSL 1.1.1g  21 Apr 2020]
+22-Oct-2020 16:37:54.092 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Oct-2020 16:37:54.314 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Oct-2020 16:37:54.324 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 637 ms
+22-Oct-2020 16:37:54.368 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Oct-2020 16:37:54.368 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.59
+22-Oct-2020 16:37:54.382 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]
+22-Oct-2020 16:37:54.767 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[199]毫秒。
+22-Oct-2020 16:37:54.783 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]的部署已在[401]毫秒内完成
+22-Oct-2020 16:37:54.784 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]
+22-Oct-2020 16:37:55.075 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]的部署已在[290]毫秒内完成
+22-Oct-2020 16:37:55.080 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]
+22-Oct-2020 16:37:55.108 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]的部署已在[28]毫秒内完成
+22-Oct-2020 16:37:55.113 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]
+22-Oct-2020 16:37:55.135 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]的部署已在[21]毫秒内完成
+22-Oct-2020 16:37:55.140 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]
+22-Oct-2020 16:37:55.160 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]的部署已在[20]毫秒内完成
+22-Oct-2020 16:37:55.168 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Oct-2020 16:37:55.180 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 855 ms
+22-Oct-2020 16:53:06.541 信息 [Thread-3] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Oct-2020 16:53:06.720 信息 [Thread-3] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Oct-2020 16:53:06.742 信息 [Thread-3] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Oct-2020 16:53:06.744 信息 [Thread-3] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+22-Oct-2020 16:53:33.628 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.59
+22-Oct-2020 16:53:33.631 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Oct 6 2020 16:57:18 UTC
+22-Oct-2020 16:53:33.633 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     8.5.59.0
+22-Oct-2020 16:53:33.633 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+22-Oct-2020 16:53:33.633 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Oct-2020 16:53:33.633 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jdk-11.0.2
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    11.0.2+9-LTS
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:53:33.634 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+22-Oct-2020 16:53:33.635 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+22-Oct-2020 16:53:33.635 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Oct-2020 16:53:33.635 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\logging.properties
+22-Oct-2020 16:53:33.635 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Oct-2020 16:53:33.635 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+22-Oct-2020 16:53:33.636 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Oct-2020 16:53:33.636 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+22-Oct-2020 16:53:33.636 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:53:33.636 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 16:53:33.636 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\temp
+22-Oct-2020 16:53:33.637 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.25]。
+22-Oct-2020 16:53:33.637 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]。
+22-Oct-2020 16:53:33.637 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
+22-Oct-2020 16:53:33.641 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL成功初始化 [OpenSSL 1.1.1g  21 Apr 2020]
+22-Oct-2020 16:53:33.674 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Oct-2020 16:53:33.894 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Oct-2020 16:53:33.902 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 589 ms
+22-Oct-2020 16:53:33.941 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Oct-2020 16:53:33.941 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.59
+22-Oct-2020 16:53:33.952 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]
+22-Oct-2020 16:53:34.279 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[183]毫秒。
+22-Oct-2020 16:53:34.294 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]的部署已在[341]毫秒内完成
+22-Oct-2020 16:53:34.294 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]
+22-Oct-2020 16:53:34.576 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]的部署已在[282]毫秒内完成
+22-Oct-2020 16:53:34.576 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]
+22-Oct-2020 16:53:34.602 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]的部署已在[26]毫秒内完成
+22-Oct-2020 16:53:34.602 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]
+22-Oct-2020 16:53:34.625 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]的部署已在[23]毫秒内完成
+22-Oct-2020 16:53:34.625 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]
+22-Oct-2020 16:53:34.644 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]的部署已在[19]毫秒内完成
+22-Oct-2020 16:53:34.648 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Oct-2020 16:53:34.657 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 754 ms
+22-Oct-2020 17:02:23.876 信息 [Thread-3] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Oct-2020 17:02:24.065 信息 [Thread-3] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Oct-2020 17:02:24.084 信息 [Thread-3] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Oct-2020 17:02:24.086 信息 [Thread-3] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
+22-Oct-2020 17:55:20.035 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/8.5.59
+22-Oct-2020 17:55:20.039 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Oct 6 2020 16:57:18 UTC
+22-Oct-2020 17:55:20.041 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     8.5.59.0
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Windows 10
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.0
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              amd64
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     C:\Program Files (x86)\Java\jdk-11.0.2
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    11.0.2+9-LTS
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+22-Oct-2020 17:55:20.042 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\logging.properties
+22-Oct-2020 17:55:20.043 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Oct-2020 17:55:20.044 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+22-Oct-2020 17:55:20.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+22-Oct-2020 17:55:20.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+22-Oct-2020 17:55:20.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 17:55:20.045 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59
+22-Oct-2020 17:55:20.046 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\temp
+22-Oct-2020 17:55:20.046 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 使用APR版本[1.7.0]加载了基于APR的Apache Tomcat本机库[1.2.25]。
+22-Oct-2020 17:55:20.046 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR功能：IPv6[true]、sendfile[true]、accept filters[false]、random[true]。
+22-Oct-2020 17:55:20.046 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL配置：useAprConnector[false]，useOpenSSL[true]
+22-Oct-2020 17:55:20.050 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL成功初始化 [OpenSSL 1.1.1g  21 Apr 2020]
+22-Oct-2020 17:55:20.089 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+22-Oct-2020 17:55:20.313 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+22-Oct-2020 17:55:20.321 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 627 ms
+22-Oct-2020 17:55:20.359 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+22-Oct-2020 17:55:20.359 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.59
+22-Oct-2020 17:55:20.369 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]。
+22-Oct-2020 17:55:20.402 严重 [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@2b8c42ea]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4803)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4939)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: java.lang.IllegalArgumentException: 指定的主资源集 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\WebProject\index.html] 无效
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:747)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+22-Oct-2020 17:55:20.404 严重 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]时出错
+	java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@2b8c42ea]
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:747)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+22-Oct-2020 17:55:20.410 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]的部署已在[40]ms内完成
+22-Oct-2020 17:55:20.412 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]
+22-Oct-2020 17:55:20.736 警告 [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom 使用[SHA1PRNG]创建会话ID生成的SecureRandom实例花费了[196]毫秒。
+22-Oct-2020 17:55:20.750 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\docs]的部署已在[338]毫秒内完成
+22-Oct-2020 17:55:20.750 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]
+22-Oct-2020 17:55:21.026 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\examples]的部署已在[276]毫秒内完成
+22-Oct-2020 17:55:21.027 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]
+22-Oct-2020 17:55:21.055 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\host-manager]的部署已在[28]毫秒内完成
+22-Oct-2020 17:55:21.055 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]
+22-Oct-2020 17:55:21.079 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\manager]的部署已在[24]毫秒内完成
+22-Oct-2020 17:55:21.079 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]
+22-Oct-2020 17:55:21.098 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\webapps\ROOT]的部署已在[19]毫秒内完成
+22-Oct-2020 17:55:21.101 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+22-Oct-2020 17:55:21.110 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 788 ms
+22-Oct-2020 17:56:31.141 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy 正在取消部署上下文[/myapp]
+22-Oct-2020 17:56:31.148 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]。
+22-Oct-2020 17:56:31.152 严重 [localhost-startStop-2] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@5ec501a1]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4803)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4939)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: java.lang.IllegalArgumentException: 指定的主资源集 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\WebProject\index.html] 无效
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:747)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+22-Oct-2020 17:56:31.153 严重 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]时出错
+	java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@5ec501a1]
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:747)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+22-Oct-2020 17:56:31.155 信息 [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]的部署已在[6]ms内完成
+22-Oct-2020 17:57:31.677 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy 正在取消部署上下文[/myapp]
+22-Oct-2020 17:57:31.682 信息 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]。
+22-Oct-2020 17:57:31.686 严重 [localhost-startStop-3] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@2b34253b]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4803)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4939)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:743)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+	Caused by: java.lang.IllegalArgumentException: 指定的主资源集 [I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\WebProject\index.html] 无效
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:747)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+22-Oct-2020 17:57:31.687 严重 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]时出错
+	java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: 无法启动组件[org.apache.catalina.webresources.StandardRoot@2b34253b]
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:747)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:719)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:614)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1822)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+		at java.base/java.lang.Thread.run(Thread.java:834)
+22-Oct-2020 17:57:31.690 信息 [localhost-startStop-3] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]的部署已在[8]ms内完成
+22-Oct-2020 17:57:51.697 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy 正在取消部署上下文[/myapp]
+22-Oct-2020 17:57:51.702 信息 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDescriptor 正在部署部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]。
+22-Oct-2020 17:57:51.727 信息 [localhost-startStop-4] org.apache.catalina.startup.HostConfig.deployDescriptor 部署描述符[I:\LaGou_BigData_Study\src\com\study\Stage2\Section3\Task1\apache-tomcat-8.5.59\conf\Catalina\localhost\myapp.xml]的部署已在[25]ms内完成
+22-Oct-2020 18:12:08.090 警告 [main] org.apache.catalina.core.StandardServer.await 收到无效的关闭命令[]
+22-Oct-2020 18:12:26.670 信息 [main] org.apache.catalina.core.StandardServer.await 通过关闭端口接收到有效的关闭命令。正在停止服务器实例。
+22-Oct-2020 18:12:26.671 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+22-Oct-2020 18:12:26.857 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+22-Oct-2020 18:12:26.877 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+22-Oct-2020 18:12:26.878 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
