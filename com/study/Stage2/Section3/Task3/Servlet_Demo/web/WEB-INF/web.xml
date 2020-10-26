@@ -27,9 +27,75 @@
         <url-pattern>/quickServlet</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>HttpServletDemo</servlet-name>
+        <servlet-class>com.lagou.servlet_demo.HttpServletDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServletDemo</servlet-name>
+        <url-pattern>/HttpServletDemo</url-pattern>
+    </servlet-mapping>
 
 
+    <!--    CServlet-->
+    <servlet>
+        <servlet-name>CServlet</servlet-name>
+        <servlet-class>com.lagou.Response.CServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CServlet</servlet-name>
+        <url-pattern>/cServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--    DServlet-->
+    <servlet>
+        <servlet-name>DServlet</servlet-name>
+        <servlet-class>com.lagou.Response.DServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DServlet</servlet-name>
+        <url-pattern>/dServlet</url-pattern>
+    </servlet-mapping>
 
 
+    <!--    DServlet-->
+    <servlet>
+        <servlet-name>EncodeServlet</servlet-name>
+        <servlet-class>com.lagou.Response.EncodeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EncodeServlet</servlet-name>
+        <url-pattern>/encodeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--    DServlet-->
+    <servlet>
+        <servlet-name>OneServlet</servlet-name>
+        <servlet-class>com.lagou.ServletContext.OneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>OneServlet</servlet-name>
+        <url-pattern>/oneServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--    DServlet-->
+    <servlet>
+        <servlet-name>TwoServlet</servlet-name>
+        <servlet-class>com.lagou.ServletContext.TwoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TwoServlet</servlet-name>
+        <url-pattern>/twoServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--    DServlet-->
+    <servlet>
+        <servlet-name>RealPathServlet</servlet-name>
+        <servlet-class>com.lagou.ServletContext.RealPathServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RealPathServlet</servlet-name>
+        <url-pattern>/realPathServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
