@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>欢迎登录学生用户信息管理系统</h2>
+<h4>请输入用户名及密码</h4>
+
+<form action="/StudentManagementSys/loginServlet" method="post">
+    <table>
+        <tr>
+            <th colspan="2">
+                <HR>
+            </th>
+        </tr>
+        <tr>
+            <th>用户名:</th>
+            <th>
+                <input type="text" name="username" id="username"> <br>
+            </th>
+        </tr>
+        <tr>
+            <th>密码:</th>
+            <th>
+                <input type="password" name="password" id="password"> <br>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <HR>
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2" align="center">
+                <input type="submit" value="登录"> <br>
+            </th>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
