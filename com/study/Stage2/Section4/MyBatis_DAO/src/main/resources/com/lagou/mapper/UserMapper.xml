@@ -4,33 +4,114 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.lagou.mapper.UserMapper">
-<!--    根据id查询用户-->
-    <select id="findUserById" parameterType="int" resultMap="userResultMap">
-        select * from user where id = #{id}
-    </select>
-
-
-<!--
-id：唯一标识
-type: 封装后的实体类型路径
--->
+    <!--
+    id：唯一标识
+    type: 封装后的实体类型路径
+    -->
     <resultMap id="userResultMap" type="com.lagou.domain.User">
-<!--        手动配置映射关系-->
-<!--        id 配置主键-->
-<!--        result 配置其他字段-->
-<!--        property代表实体类中字段名-->
-<!--        column代表数据库中字段名-->
+        <!--        手动配置映射关系-->
+        <!--        id 配置主键-->
+        <!--        result 配置其他字段-->
+        <!--        property代表实体类中字段名-->
+        <!--        column代表数据库中字段名-->
         <id property="id" column="id"></id>
         <result property="username" column="username"></result>
         <result property="birthday" column="birthday"></result>
         <result property="sex" column="sex"></result>
         <result property="address" column="address"></result>
     </resultMap>
-    
-<!--查询所有用户-->
 
-    <select id="findAllResultMap" resultMap="userResultMap">
+    <sql id="selectUser">
         select * from user
+    </sql>
+
+    <!--根据id查询用户-->
+    <select id="findUserById" parameterType="int" resultMap="userResultMap">
+        select *
+        from user
+        where id = #{id}
+    </select>
+
+
+    <!--查询所有用户-->
+    <select id="findAllResultMap" resultMap="userResultMap">
+        <include refid="selectUser"/>
+    </select>
+
+
+    <!--模糊查询-->
+    <select id="findByUserName" resultMap="userResultMap" parameterType="string">
+        select *
+        from user
+        where username like #{username}
+    </select>
+
+    <!--    添加用户，返回主键值-->
+    <insert id="savaUser" parameterType="user">
+        <!--
+            selectKey: 声明返回主键
+            keyColumn: 数据库中主键字段名
+            keyProperty: 返回主键的值 封装到哪个字段中
+            resultType: 返回值类型
+        -->
+        <selectKey order="AFTER" keyColumn="id" keyProperty="id" resultType="int">
+            select last_insert_id()
+        </selectKey>
+        insert into user (username, birthday, sex, address) values (#{username}, #{birthday}, #{sex}, #{address})
+    </insert>
+
+    <!--动态查询-->
+    <select id="findByIdAndUsernameIf" parameterType="user" resultType="com.lagou.domain.User">
+        <include refid="selectUser"/>
+        <where>
+            <!--
+            test中填写表达式
+            -->
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="username != null">
+                and username = #{username}
+            </if>
+        </where>
+    </select>
+
+
+    <!--动态更新-->
+    <update id="updateIf" parameterType="user">
+        update user
+        <set>
+            <!--更新时，自动添加set关键字-->
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="address != null">
+                address = #{address}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--动态foreach-->
+    <select id="findByList" parameterType="list" resultType="User">
+        <include refid="selectUser"/>
+        <where>
+            <!--
+            collection: 代表要遍历的集合元素 通常写成collection或list
+            open: 语句开始部分
+            close: 语句结束部分
+            item: 遍历集合中的每个元素的变量名
+            -->
+            <foreach collection="collection" open="id in (" close=")" item="id" separator=",">
+                #{id}
+            </foreach>
+        </where>
     </select>
 
 </mapper>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lagou.mapper.UserMapper">
+
+    <resultMap id="user2orderMap" type="com.lagou.domain.User">
+
+        <id property="id" column="userid"></id>
+        <result property="username" column="username"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+        <!--
+        进行一对一关联查询配置时 使用association标签进行关联
+        property: 要封装实体的属性名
+        javaType: 要封装的实体的属性类型
+        -->
+        <collection property="ordersList" ofType="com.lagou.domain.Orders">
+            <id property="id" column="orderid"></id>
+            <result property="ordertime" column="ordertime"></result>
+            <result property="total" column="total"></result>
+            <result property="uid" column="uid"></result>
+        </collection>
+    </resultMap>
+
+
+    <!--
+    1对1关联查询
+    查询所有订单 同事查出每个订单所属的用户信息
+    -->
+
+
+    <select id="findAllWithOrders" resultMap="user2orderMap">
+        select o.id as orderid,
+               ordertime,
+               total,
+               uid,
+               u.id as userid,
+               username,
+               birthday,
+               sex,
+               address
+        from orders o
+                 right join user u on o.uid = u.id
+
+    </select>
+
+
+    <!--
+    多对多关联查询
+    -->
+
+    <resultMap id="userRoleMap" type="com.lagou.domain.User">
+        <id property="id" column="uid"></id>
+        <result property="username" column="username"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+
+        <collection property="roleList" ofType="com.lagou.domain.Role">
+            <id property="id" column="srid"></id>
+            <result property="rolename" column="rolename"></result>
+            <result property="roleDesc" column="roleDesc"></result>
+        </collection>
+    </resultMap>
+
+    <select id="findAllUserWithRole" resultMap="userRoleMap">
+        select u.id  as uid,
+               username,
+               birthday,
+               sex,
+               address,
+               userid,
+               roleid,
+               sr.id as srid,
+               rolename,
+               roleDesc
+        from user u
+                 left join sys_user_role sur on u.id = sur.roleid
+                 left join sys_role sr on sur.userid = sr.id
+    </select>
+
+
+    <!--
+    根据id查找User
+    -->
+
+    <select id="findUserById" resultType="User" parameterType="int">
+        SELECT *
+        FROM user
+        WHERE id = #{id};
+    </select>
+
+
+    <!--
+    一对多嵌套查询所有用户，与此同时查询出该用户具有的订单
+    -->
+
+    <resultMap id="findAllWithOrders2Map" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+        
+        <collection property="ordersList"
+                    ofType="com.lagou.domain.Orders"
+                    select="com.lagou.mapper.OrderMapper.findOrdersByUserId"
+                    column="id">
+        </collection>
+
+    </resultMap>
+
+
+    <select id="findAllWithOrders2" resultMap="findAllWithOrders2Map">
+        select * from user
+    </select>
+
+
+    <!--
+    多对多嵌套查询用户 同时查询出该用户的所有角色
+    -->
+
+    <resultMap id="findAllUserWithRole2Map" type="user">
+        <id property="id" column="id"></id>
+        <result property="username" column="username"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="sex" column="sex"></result>
+        <result property="address" column="address"></result>
+
+        <collection property="roleList"
+                    ofType="com.lagou.domain.Role"
+                    select="com.lagou.mapper.RoleMapper.findRoleByUserId"
+                    column="id"/>
+    </resultMap>
+
+    <select id="findAllUserWithRole2" resultMap="findAllUserWithRole2Map">
+        select * from user
+    </select>
+
+
+
+</mapper>
+
