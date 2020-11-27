@@ -93,7 +93,6 @@
                     /*提交表单*/
                     $('#deleteBatchForm').submit();
                 }
-
             }else {
                 alert('想啥呢，没事瞎操作啥')
             }

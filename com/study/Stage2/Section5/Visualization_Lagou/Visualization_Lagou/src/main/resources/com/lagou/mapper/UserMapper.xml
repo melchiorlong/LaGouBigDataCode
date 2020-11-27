@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lagou.mapper.UserMapper">
+
+    <!--封装一个返回类型为ResultMap-->
+    <resultMap id="loginMap" type="com.lagou.model.User">
+        <constructor>
+            <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="username" jdbcType="VARCHAR" javaType="string"/>
+            <arg column="PASSWORD" jdbcType="VARCHAR" javaType="string"/>
+            <arg column="email" jdbcType="VARCHAR" javaType="string"/>
+            <arg column="phone" jdbcType="VARCHAR" javaType="string"/>
+            <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+        </constructor>
+    </resultMap>
+
+    <!--抽取一个Sql片段-->
+    <sql id="field">
+        id, username, password, email, phone, create_time, update_time
+    </sql>
+
+    <!--校验用户名是否存在-->
+    <select id="check" resultType="int" parameterType="String">
+        select count(*)
+        from user
+        where username = #{username}
+    </select>
+
+    <!--用户登录 使用用户名username和密码password-->
+    <select id="selectLogin" resultMap="loginMap">
+        select
+        <include refid="field"/>
+        from user
+        where username = #{username} and password = #{password}
+    </select>
+
+    <!--查询所有用户信息-->
+    <select id="userList" resultType="com.lagou.model.User">
+        select
+        <include refid="field"/>
+        from user order by id asc
+    </select>
+
+    <!--校验邮箱是否存在-->
+    <select id="checkEmail" resultType="int" parameterType="string">
+        select count(*)
+        from user
+        where email = #{email}
+    </select>
+
+    <!--插入用户-->
+    <insert id="insert" parameterType="com.lagou.model.User">
+        insert into user (id, username, password, email, phone, create_time, update_time)
+        values (#{id}, #{username}, #{password}, #{email}, #{phone}, now(), now())
+    </insert>
+
+    <!--根据主键ID查询user-->
+    <select id="selectByPK" parameterType="int" resultType="com.lagou.model.User">
+        select
+        <include refid="field"/>
+        from user where id = #{id}
+    </select>
+
+    <!--删除用户-->
+    <delete id="deleteByPK" parameterType="int">
+        delete
+        from user
+        where id = #{id}
+    </delete>
+
+    <!--更新用户-->
+    <update id="update" parameterType="com.lagou.model.User">
+        update user
+        set username = #{username},
+            email = #{email},
+            phone = #{phone}
+        where id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.lagou.mapper.IndustryMapper">
+
+    <!--统计各个城市招聘情况-->
+    <select id="countCityPosition" resultType="com.lagou.vo.ConverterVo">
+        SELECT position_city as name, COUNT(*) as value
+        FROM position_info_v2
+        WHERE position_city != ''
+        GROUP BY position_city
+        ORDER BY value DESC
+        LIMIT 10
+    </select>
+
+    <!--统计热门行业信息Top10-->
+    <select id="countIndustryTop" resultType="com.lagou.vo.IndustryVo">
+        select distinct position_type_name as positionName, sum(position_num) as num
+        from position_type_info_v2
+        group by position_type_name
+        order by num desc
+        limit 10
+    </select>
+
+    <!--平均工资最高的前10的城市-->
+    <select id="salaryTop" resultType="com.lagou.vo.SalaryTopVo">
+        select temp.position_city                             as positionCity,
+               round(sum(temp.avg) / count(position_city), 2) as avgSalary
+        from (
+                 select position_city,
+                        ((SUBSTRING_INDEX(position_salary, '-', 1)) +
+                         replace(SUBSTRING_INDEX(position_salary, '-', -1), 'K', '')) / 2 as avg
+                 from position_info_v2
+                 where position_salary like '%K'
+                 union
+                 select tep.position_city,
+                        (tep.min + tep.max) * tep.month / 12 / 2 as avg
+                 from (
+                          select position_city,
+                                 position_salary,
+                                 SUBSTRING_INDEX(position_salary, '-', 1)                     as min,
+                                 SUBSTRING_INDEX(replace(SUBSTRING_INDEX(
+                                                                 replace(SUBSTRING_INDEX(position_salary, '-', -1), 'K', ''),
+                                                                 '-', -1), '薪', ''), '·', 1)  as max,
+                                 SUBSTRING_INDEX(replace(SUBSTRING_INDEX(
+                                                                 replace(SUBSTRING_INDEX(position_salary, '-', -1), 'K', ''),
+                                                                 '-', -1), '薪', ''), '·', -1) as month
+                          from position_info_v2
+                          where position_salary like '%薪') tep
+                 union
+                 select position_city,
+                        ((SUBSTRING_INDEX(position_salary, '-', 1)) +
+                         replace(SUBSTRING_INDEX(position_salary, '-', -1), '/天', '')) / 2 * 21.75 / 1000 as avg
+                 from position_info_v2
+                 where position_salary like '%天'
+             ) temp
+        group by positionCity
+        order by avgSalary desc
+        limit 10
+    </select>
+
+</mapper>

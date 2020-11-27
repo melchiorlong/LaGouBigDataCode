@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Elmer I Fast build Admin dashboard for any platform</title>
+    <meta name="description" content="Elmer is a Dashboard & Admin Site Responsive Template by hencework."/>
+    <meta name="keywords"
+          content="admin, admin dashboard, admin template, cms, crm, Elmer Admin, Elmeradmin, premium admin templates, responsive admin, sass, panel, software, ui, visualization, web app, application"/>
+    <meta name="author" content="hencework"/>
+
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+    <script src="dist/js/echarts.min.js"></script>
+
+</head>
+<body>
+
+<!--/Preloader-->
+<div class="wrapper  theme-1-active pimary-color-blue">
+    <!-- Main Content -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default card-view">
+                <div class="panel-heading">
+                    <div class="pull-left">
+                        <h6 class="panel-title txt-dark">平均工资最高的前10的城市</h6>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="panel-wrapper collapse in">
+                    <div class="panel-body">
+                        <!--图表区域-->
+                        <div id="main" style="height: 700px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery -->
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Slimscroll JavaScript -->
+<script src="dist/js/jquery.slimscroll.js"></script>
+<!-- Fancy Dropdown JS -->
+<script src="dist/js/dropdown-bootstrap-extended.js"></script>
+<!-- Owl JavaScript -->
+<script src="vendors/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+<!-- Switchery JavaScript -->
+<script src="vendors/bower_components/switchery/dist/switchery.min.js"></script>
+<!-- Init JavaScript -->
+<script src="dist/js/init.js"></script>
+
+
+</body>
+<script>
+    // 创建Echart对象
+    let myChart = echarts.init(document.getElementById("main"));
+
+    // 发送ajax请求 获取后台数据
+    $.post("/Visualization_Lagou/industry/salaryTop.do", function (data) {
+        // 在回调函数中设置option
+        myChart.setOption({
+            yAxis: {
+                type: 'category',
+                data: data.data.cityNameList
+            },
+            xAxis: {
+                type: 'value'
+            },
+            series: [{
+                data: data.data.salaryList,
+                type: 'bar',
+                showBackground: true,
+                backgroundStyle: {
+                    color: 'rgba(220, 220, 220, 0.8)'
+                }
+            }]
+        })
+    }, "json")
+
+
+</script>
+</html>
